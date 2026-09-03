@@ -223,6 +223,9 @@ function setActiveSection(id) {
   document.querySelectorAll('[data-rail-for]').forEach((li) => {
     li.classList.toggle('is-active', li.dataset.railFor === id);
   });
+  document.querySelectorAll('[data-fg]').forEach((el) => {
+    el.classList.toggle('is-active', el.dataset.fg === id);
+  });
 }
 
 function updateRailFill(index, local) {
@@ -276,9 +279,42 @@ function initCursor() {
 }
 
 /* ---------------------------------------------------------------------- */
-/* 7. BOOT                                                                  */
+/* 7. PRELOADER                                                            */
+/* ---------------------------------------------------------------------- */
+function initPreloader() {
+  const el = document.getElementById('preloader');
+  const fill = document.getElementById('preloader-fill');
+  if (!el) return;
+  if (prefersReducedMotion) {
+    el.classList.add('is-done');
+    return;
+  }
+  let pct = 0;
+  const tick = () => {
+    pct = Math.min(100, pct + (100 - pct) * 0.18 + 1.5);
+    fill.style.right = `${100 - pct}%`;
+    if (pct < 100) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+
+  const finish = () => {
+    fill.style.right = '0%';
+    setTimeout(() => el.classList.add('is-done'), 220);
+  };
+  const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+  Promise.race([
+    fontsReady,
+    new Promise((resolve) => setTimeout(resolve, 1200)),
+  ]).then(() => setTimeout(finish, 350));
+  // hard safety net so a slow font load never traps the visitor
+  setTimeout(finish, 3000);
+}
+
+/* ---------------------------------------------------------------------- */
+/* 8. BOOT                                                                  */
 /* ---------------------------------------------------------------------- */
 async function boot() {
+  initPreloader();
   renderNav();
   renderStackGroups();
   renderProjects();

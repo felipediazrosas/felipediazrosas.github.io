@@ -179,7 +179,7 @@ export const PULSE_ROUTES = [
 export const STACK_GROUPS = [
   {
     title: 'Full Stack',
-    items: ['TypeScript', 'Node.js', 'React', 'Python', 'REST & GraphQL APIs', 'PostgreSQL / MySQL'],
+    items: ['PHP / Laravel', 'TypeScript', 'Node.js', 'React', 'Python', 'REST & GraphQL APIs', 'PostgreSQL / MySQL'],
   },
   {
     title: 'AI & Automation',

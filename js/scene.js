@@ -99,6 +99,16 @@ export class SystemsScene {
       nodeGroup.add(sprite);
     });
 
+    // one large soft beacon behind the core — the site's quiet "moon"
+    const beaconMat = new THREE.SpriteMaterial({
+      map: haloTexture, color: 0x4e8cff, transparent: true, opacity: 0.16,
+      depthWrite: false, blending: THREE.AdditiveBlending,
+    });
+    const beacon = new THREE.Sprite(beaconMat);
+    beacon.position.set(0, 0, -3);
+    beacon.scale.set(9, 9, 1);
+    nodeGroup.add(beacon);
+
     scene.add(nodeGroup);
 
     // ---- edges (static hairlines) -----------------------------------------
@@ -147,6 +157,7 @@ export class SystemsScene {
     const particleMat = new THREE.PointsMaterial({ color: 0x39404e, size: 0.06, transparent: true, opacity: 0.55, sizeAttenuation: true });
     const particles = new THREE.Points(particleGeom, particleMat);
     scene.add(particles);
+    this._particleRange = { yTop: 25, yBottom: -25 };
 
     // ---- lighting (minimal, unlit materials mostly, this is just ambience) --
     scene.add(new THREE.AmbientLight(0x334155, 0.6));
@@ -268,6 +279,21 @@ export class SystemsScene {
     });
   }
 
+  _updateParticleDrift(dt) {
+    const pos = this.particles.geometry.attributes.position;
+    const arr = pos.array;
+    const { yTop, yBottom } = this._particleRange;
+    for (let i = 0; i < arr.length; i += 3) {
+      arr[i + 1] -= dt * 0.35; // gentle downward drift
+      arr[i] += dt * 0.05; // gentle rightward drift
+      if (arr[i + 1] < yBottom) {
+        arr[i + 1] = yTop;
+        arr[i] -= 6;
+      }
+    }
+    pos.needsUpdate = true;
+  }
+
   start() {
     const loop = () => {
       if (this.disposed) return;
@@ -276,8 +302,8 @@ export class SystemsScene {
       this._updateCamera(dt, elapsed);
       if (!this.reducedMotion) {
         this._updatePulses(elapsed);
+        this._updateParticleDrift(dt);
         this.nodeGroup.rotation.y = Math.sin(elapsed * 0.02) * 0.02;
-        this.particles.rotation.y = elapsed * 0.004;
       }
       this.composer.render();
       this._raf = requestAnimationFrame(loop);

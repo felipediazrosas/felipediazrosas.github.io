@@ -1,0 +1,46 @@
+<svg color="#6fa8ff" viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor">
+  <g stroke-width="1.1" opacity="0.85">
+    <!-- rack frame -->
+    <rect x="150" y="60" width="180" height="300" rx="4" opacity="0.5"/>
+    <!-- server units -->
+    <g stroke-width="1">
+      <rect x="164" y="76" width="152" height="34" rx="2"/>
+      <rect x="164" y="118" width="152" height="34" rx="2"/>
+      <rect x="164" y="160" width="152" height="34" rx="2"/>
+      <rect x="164" y="202" width="152" height="34" rx="2"/>
+      <rect x="164" y="244" width="152" height="34" rx="2"/>
+      <rect x="164" y="286" width="152" height="34" rx="2"/>
+    </g>
+    <!-- status dots -->
+    <g stroke="none">
+      <circle cx="178" cy="93" r="2.4" fill="currentColor" opacity="0.9"/>
+      <circle cx="178" cy="135" r="2.4" fill="currentColor" opacity="0.5"/>
+      <circle cx="178" cy="177" r="2.4" fill="currentColor" opacity="0.9"/>
+      <circle cx="178" cy="219" r="2.4" fill="currentColor" opacity="0.5"/>
+      <circle cx="178" cy="261" r="2.4" fill="currentColor" opacity="0.9"/>
+      <circle cx="178" cy="303" r="2.4" fill="currentColor" opacity="0.5"/>
+    </g>
+    <!-- vent ticks -->
+    <g stroke-width="0.7" opacity="0.55">
+      <line x1="200" y1="86" x2="300" y2="86"/>
+      <line x1="200" y1="128" x2="300" y2="128"/>
+      <line x1="200" y1="170" x2="300" y2="170"/>
+      <line x1="200" y1="212" x2="300" y2="212"/>
+      <line x1="200" y1="254" x2="300" y2="254"/>
+      <line x1="200" y1="296" x2="300" y2="296"/>
+    </g>
+    <!-- external trace to left node -->
+    <path d="M150 93 H90 V150" stroke-width="1"/>
+    <circle cx="90" cy="160" r="5" opacity="0.8"/>
+    <circle cx="90" cy="160" r="10" opacity="0.18"/>
+    <!-- external trace to right node -->
+    <path d="M330 177 H400 V240" stroke-width="1"/>
+    <circle cx="400" cy="250" r="5" opacity="0.8"/>
+    <circle cx="400" cy="250" r="10" opacity="0.18"/>
+    <!-- lower trace to distant node -->
+    <path d="M240 360 V400 H70" stroke-width="1"/>
+    <circle cx="60" cy="400" r="4" opacity="0.7"/>
+    <!-- base -->
+    <line x1="150" y1="366" x2="330" y2="366" stroke-width="1" opacity="0.4"/>
+  </g>
+</svg>

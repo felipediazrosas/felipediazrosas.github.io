@@ -1,0 +1,25 @@
+<svg color="#6fa8ff" viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor">
+<g stroke-width="1.1" opacity="0.85">
+<circle cx="140" cy="210" r="45" opacity="0.5"/>
+<circle cx="190" cy="175" r="58" opacity="0.5"/>
+<circle cx="260" cy="170" r="62" opacity="0.5"/>
+<circle cx="325" cy="200" r="48" opacity="0.5"/>
+<circle cx="220" cy="225" r="55" opacity="0.5"/>
+<circle cx="290" cy="220" r="50" opacity="0.5"/>
+</g>
+<g stroke-width="1">
+<rect x="159" y="183" width="32" height="24" rx="3"/>
+<rect x="224" y="173" width="32" height="24" rx="3"/>
+<rect x="284" y="193" width="32" height="24" rx="3"/>
+</g>
+<g stroke-width="1" opacity="0.6">
+<path d="M175 207 V360 H60 V380"/>
+<path d="M240 197 V380 H230 V400"/>
+<path d="M300 217 V360 H400 V380"/>
+</g>
+<g stroke="none">
+<circle cx="60" cy="380" r="4" fill="currentColor" opacity="0.75"/>
+<circle cx="230" cy="400" r="4" fill="currentColor" opacity="0.75"/>
+<circle cx="400" cy="380" r="4" fill="currentColor" opacity="0.75"/>
+</g>
+</svg>

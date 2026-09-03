@@ -1,0 +1,37 @@
+<svg color="#6fa8ff" viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor">
+  <g stroke-width="1.1" opacity="0.85">
+    <!-- four layer bands, isometric-ish offset -->
+    <path d="M60 120 L240 70 L420 120 L240 170 Z" stroke-width="1"/>
+    <path d="M60 190 L240 140 L420 190 L240 240 Z" stroke-width="1"/>
+    <path d="M60 260 L240 210 L420 260 L240 310 Z" stroke-width="1"/>
+    <path d="M60 330 L240 280 L420 330 L240 380 Z" stroke-width="1"/>
+
+    <!-- connecting verticals at the seams -->
+    <g stroke-width="0.8" opacity="0.55">
+      <line x1="240" y1="170" x2="240" y2="210"/>
+      <line x1="240" y1="240" x2="240" y2="280"/>
+      <line x1="240" y1="310" x2="240" y2="350"/>
+      <line x1="60" y1="120" x2="60" y2="330"/>
+      <line x1="420" y1="120" x2="420" y2="330"/>
+    </g>
+
+    <!-- direction ticks between layers -->
+    <g stroke-width="1" opacity="0.7">
+      <path d="M230 190 l10 10 l10 -10"/>
+      <path d="M230 260 l10 10 l10 -10"/>
+      <path d="M230 330 l10 10 l10 -10"/>
+    </g>
+
+    <!-- node points at layer centers -->
+    <g stroke="none">
+      <circle cx="240" cy="120" r="3" fill="currentColor" opacity="0.9"/>
+      <circle cx="240" cy="190" r="3" fill="currentColor" opacity="0.9"/>
+      <circle cx="240" cy="260" r="3" fill="currentColor" opacity="0.9"/>
+      <circle cx="240" cy="330" r="3" fill="currentColor" opacity="0.9"/>
+    </g>
+
+    <!-- side branch to an external service -->
+    <path d="M420 190 H460 V150" stroke-width="1" opacity="0.6"/>
+    <circle cx="460" cy="140" r="4" opacity="0.7"/>
+  </g>
+</svg>
