@@ -3,13 +3,29 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Full Stack Developer &amp; AI Engineer — Systems, Automation, Integrations</title>
+<title>Felipe Diaz Full Stack Developer &amp; AI Engineer — Systems, Automation, Integrations</title>
 <meta name="description" content="Full Stack Developer &amp; AI Engineer / AI Builder specialising in automation, integrations, Moodle, Brightspace and AWS. Digital solutions that connect platforms." />
 <meta name="color-scheme" content="dark" />
-<link rel="icon" href="data:," />
+
+<!-- Favicon (System Icon: Codigo) -->
+<link rel="icon" type="image/png" href="assets/foreground/codigo.png" />
+
+<!-- Style Modules -->
+<link rel="stylesheet" href="css/fonts.css" />
 <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+
+<div id="preloader" role="status" aria-label="Loading">
+  <div class="preloader-inner">
+    <div class="preloader-mark" aria-hidden="true">◆</div>
+    <p class="preloader-label">Initialising systems</p>
+    <div class="preloader-bar"><i id="preloader-fill"></i></div>
+  </div>
+</div>
+
+<div id="grain" aria-hidden="true"></div>
+<div id="vignette" aria-hidden="true"></div>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -54,6 +70,27 @@
   <ol id="chapter-rail-list" class="chapter-rail-list"></ol>
 </aside>
 
+<!-- Foreground blueprint illustrations — pinned per chapter, echo the
+     systems graph in the WebGL layer with original vector line art. -->
+<div class="fg-layer" data-fg="ecosystem" aria-hidden="true">
+  <img src="assets/foreground/server-cluster.svg" alt="" />
+</div>
+<div class="fg-layer" data-fg="capabilities" aria-hidden="true">
+  <img src="assets/foreground/layer-stack.svg" alt="" />
+</div>
+<div class="fg-layer" data-fg="ai-lab" aria-hidden="true">
+  <img src="assets/foreground/neural-graph.svg" alt="" />
+</div>
+<div class="fg-layer" data-fg="learning" aria-hidden="true">
+  <img src="assets/foreground/lms-bridge.svg" alt="" />
+</div>
+<div class="fg-layer" data-fg="infrastructure" aria-hidden="true">
+  <img src="assets/foreground/cloud-infra.svg" alt="" />
+</div>
+<div class="fg-layer" data-fg="solutions" aria-hidden="true">
+  <img src="assets/foreground/codigo.svg" alt="" />
+</div>
+
 <main id="main">
 
   <!-- ============================== HERO ============================== -->
@@ -61,7 +98,7 @@
     <div class="chapter-inner">
       <p class="eyebrow"><span class="coord">N.00 — INDEX</span></p>
       <h1 id="hero-heading" class="display display--hero" data-reveal-words>
-        Full Stack Developer<br /><span class="display-accent">&amp; AI Engineer</span><span class="display-tag"> / AI Builder</span>
+        Felipe Diaz Developer<br /><span class="display-accent">&amp; AI Engineer</span><span class="display-tag"> / AI Builder</span>
       </h1>
       <p class="lede" data-reveal-words>I build digital solutions that connect platforms, automate what shouldn&rsquo;t be manual, and put AI to work inside real systems — not around them.</p>
 
@@ -176,13 +213,14 @@
       <h2 id="contact-heading" class="display display--contact">Let&rsquo;s connect the next system.</h2>
 
       <div class="contact-actions">
-        <a class="btn btn--primary" href="mailto:hello@example.com">hello@example.com</a>
-        <a class="btn btn--ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        <a class="btn btn--ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a class="btn btn--primary" href="mailto:luisfelipediazrosas@gmail.com">luisfelipediazrosas@gmail.com</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/luis-felipe-diaz-rosas-078655209" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+         <!--a class="btn btn--ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a-->
+        <a class="btn btn--ghost" href="https://www.instagram.com/felipediaz.dev" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
       </div>
 
       <footer class="site-footer">
-        <p>Built with vanilla JS &amp; Three.js. No frameworks, no trackers.</p>
+        <p>Built for Felipe Diaz @2026</p>
       </footer>
     </div>
   </section>
